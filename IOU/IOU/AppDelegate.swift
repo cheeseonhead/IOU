@@ -71,9 +71,11 @@ extension AppDelegate: GIDSignInDelegate {
         
         
         service.authorizer = user.authentication.fetcherAuthorizer()
+
+        _ = DriveManager(authorizer: user)
         
-        createFile()
-        listFiles()
+//        createFile()
+//        listFiles()
     }
     
     func createFile() {
