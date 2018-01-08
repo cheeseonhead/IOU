@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CA3CEADABBDF831A4787894 /* Pods_IOUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5510885D7F59D5DFC9BDF17C /* Pods_IOUTests.framework */; };
+		344D28422003015A0003880E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D28412003015A0003880E /* Credentials.swift */; };
 		34B22A492002CC6100898009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A482002CC6100898009 /* AppDelegate.swift */; };
 		34B22A4B2002CC6100898009 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A4A2002CC6100898009 /* FirstViewController.swift */; };
 		34B22A4D2002CC6100898009 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A4C2002CC6100898009 /* SecondViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		22FA3C353414EDE1A7C72772 /* Pods-IOUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOUUITests/Pods-IOUUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		344D28412003015A0003880E /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		34B22A452002CC6100898009 /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B22A482002CC6100898009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B22A4A2002CC6100898009 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		344D28402003014A0003880E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				344D28412003015A0003880E /* Credentials.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		34B22A3C2002CC6100898009 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		34B22A472002CC6100898009 /* IOU */ = {
 			isa = PBXGroup;
 			children = (
+				344D28402003014A0003880E /* Shared */,
 				34B22A782002D0AC00898009 /* Resources */,
 				34B22A482002CC6100898009 /* AppDelegate.swift */,
 				34B22A4A2002CC6100898009 /* FirstViewController.swift */,
@@ -486,6 +497,7 @@
 			files = (
 				34B22A4D2002CC6100898009 /* SecondViewController.swift in Sources */,
 				34B22A492002CC6100898009 /* AppDelegate.swift in Sources */,
+				344D28422003015A0003880E /* Credentials.swift in Sources */,
 				34B22A4B2002CC6100898009 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

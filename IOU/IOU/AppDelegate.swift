@@ -17,10 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Initialize sign-in
-        var configureError: NSError?
-        
-        GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
+        GIDSignIn.sharedInstance().clientID = Credentials.Google.clientID
         
         GIDSignIn.sharedInstance().delegate = self
         
