@@ -72,8 +72,30 @@ extension AppDelegate: GIDSignInDelegate {
         
         service.authorizer = user.authentication.fetcherAuthorizer()
         
-        
+        createFile()
         listFiles()
+    }
+    
+    func createFile() {
+        
+        let file = GTLRDrive_File()
+        file.name = "Testing"
+        file.mimeType = "application/vnd.google-apps.spreadsheet"
+        
+        
+        let query = GTLRDriveQuery_FilesCreate.query(withObject: file, uploadParameters: nil)
+        service.executeQuery(query, delegate: self, didFinish: #selector(displayCreateResultWithTicket(ticket:finishedWithObject:error:)))
+    }
+    
+    @objc func displayCreateResultWithTicket(ticket: GTLRServiceTicket,
+                                       finishedWithObject result: GTLRDrive_File,
+                                       error: NSError?) {
+        guard error == nil else {
+            print("Error: \(error?.localizedDescription)")
+            return
+        }
+        
+        print("File has been created: \(result.name)")
     }
     
     func listFiles() {

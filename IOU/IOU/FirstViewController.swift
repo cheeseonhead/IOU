@@ -11,6 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var signOutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class FirstViewController: UIViewController {
         GIDSignIn.sharedInstance().uiDelegate = self
         
         // Uncomment to automatically sign in the user.
-//        GIDSignIn.sharedInstance().signInSilently()
+        GIDSignIn.sharedInstance().signInSilently()
         
         
     }
@@ -30,6 +31,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func signout(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+    }
+    
 
 }
 

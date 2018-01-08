@@ -40,6 +40,13 @@
                                     <constraint firstAttribute="height" constant="45" id="zjX-aN-HTh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-Cq-m2N">
+                                <rect key="frame" x="157" y="402" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signout:" destination="9pv-A4-QxB" eventType="touchUpInside" id="pjk-Aw-DwF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -48,6 +55,8 @@
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="i4D-Cq-m2N" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="gGB-z3-Px1"/>
+                            <constraint firstItem="i4D-Cq-m2N" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="22" id="jni-wg-A5s"/>
                             <constraint firstItem="4p3-fN-h0j" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="qbw-K1-LIt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -55,6 +64,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="signInButton" destination="4p3-fN-h0j" id="bqp-Wi-63L"/>
+                        <outlet property="signOutButton" destination="i4D-Cq-m2N" id="Q9Q-5d-YvX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
