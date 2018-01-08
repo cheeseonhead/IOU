@@ -1,9 +1,4 @@
 PODS:
-  - GoogleAPIClientForREST/Core (1.2.1):
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Sheets (1.2.1):
-    - GoogleAPIClientForREST/Core
-    - GTMSessionFetcher (>= 1.1.7)
   - GoogleSignIn (4.1.1):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -26,16 +21,14 @@ PODS:
     - GTMSessionFetcher/Core (= 1.1.12)
 
 DEPENDENCIES:
-  - GoogleAPIClientForREST/Sheets (~> 1.2.1)
   - GoogleSignIn
 
 SPEC CHECKSUMS:
-  GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GoogleSignIn: 3fdaa34a2ba04dbd7a25d7db39aecb0da98d5bdc
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
 
-PODFILE CHECKSUM: 21e871dddfc71953ba6afc521edf726ca90671cb
+PODFILE CHECKSUM: f553f29ba6180a7de755523b9f80f5c90b2b60b5
 
 COCOAPODS: 1.2.0

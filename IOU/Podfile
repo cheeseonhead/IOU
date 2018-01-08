@@ -8,7 +8,6 @@ target 'IOU' do
   use_frameworks!
 
   # Pods for IOU
-  pod 'GoogleAPIClientForREST/Sheets', '~> 1.2.1'
   pod 'GoogleSignIn'
 
   target 'IOUTests' do
