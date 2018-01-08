@@ -15,8 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Initialize sign-in
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
+        
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url,
+                                                 sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -44,3 +58,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        guard error == nil else {
+            print("\(error.localizedDescription)")
+            return
+        }
+        
+        print("Has logged in: \(user.profile.name)")
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        guard error == nil else {
+            print("\(error.localizedDescription)")
+            return
+        }
+        
+        print("Has disconnected: \(user.profile.name)")
+    }
+}
