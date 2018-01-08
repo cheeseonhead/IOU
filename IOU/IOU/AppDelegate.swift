@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import GoogleSignIn
+import GoogleAPIClientForREST
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var service = GTLRDriveService()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = Credentials.Google.clientID
+        GIDSignIn.sharedInstance().scopes = [kGTLRAuthScopeDriveFile]
         
         GIDSignIn.sharedInstance().delegate = self
         
@@ -64,6 +68,45 @@ extension AppDelegate: GIDSignInDelegate {
         }
         
         print("Has logged in: \(user.profile.name)")
+        
+        
+        service.authorizer = user.authentication.fetcherAuthorizer()
+        
+        
+        listFiles()
+    }
+    
+    func listFiles() {
+        let query = GTLRDriveQuery_FilesList.query()
+        query.corpora = "user"
+        query.pageSize = 10
+        service.executeQuery(query,
+                             delegate: self,
+                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:))
+        )
+    }
+    
+    // Process the response and display output
+    @objc func displayResultWithTicket(ticket: GTLRServiceTicket,
+                                 finishedWithObject result : GTLRDrive_FileList,
+                                 error : NSError?) {
+        
+        if let error = error {
+            print("Error: \(error.localizedDescription)")
+            return
+        }
+        
+        var text = "";
+        if let files = result.files, !files.isEmpty {
+            text += "Files:\n"
+            for file in files {
+                text += "\(file.name!) (\(file.identifier!))\n"
+            }
+        } else {
+            text += "No files found."
+        }
+        
+        print(text)
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

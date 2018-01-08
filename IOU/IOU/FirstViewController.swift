@@ -20,7 +20,9 @@ class FirstViewController: UIViewController {
         GIDSignIn.sharedInstance().uiDelegate = self
         
         // Uncomment to automatically sign in the user.
-        GIDSignIn.sharedInstance().signInSilently()
+//        GIDSignIn.sharedInstance().signInSilently()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
