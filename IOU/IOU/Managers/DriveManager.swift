@@ -25,16 +25,12 @@ class DriveManager {
         }
         
         do {
-            let common = try String(contentsOfFile: test1Path, encoding: String.Encoding.utf8)
-            _ = context.evaluateScript(common)
-            
-            var test1Var = context.objectForKeyedSubscript("test")
-            print(test1Var)
-            
             let test2 = try String(contentsOfFile: test2Path, encoding: String.Encoding.utf8)
             _ = context.evaluateScript(test2)
+            let common = try String(contentsOfFile: test1Path, encoding: String.Encoding.utf8)
+            _ = context.evaluateScript(common)
 
-            test1Var = context.objectForKeyedSubscript("test")
+            let test1Var = context.objectForKeyedSubscript("test")
             print(test1Var)
             let test2Function = context.objectForKeyedSubscript("test2")
             print(test2Function)
