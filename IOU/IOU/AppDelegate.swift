@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GIDSignIn.sharedInstance().delegate = self
         
+        GIDSignIn.sharedInstance().signInSilently()
+        
         return true
     }
     
