@@ -44,7 +44,7 @@ extension AppDelegate: GIDSignInDelegate {
         guard error == nil else {
             switch(error.getGIDSignInError()) {
             case .hasNoAuthInKeychain:
-                UIViewTransitioner.transitionRootViewController(with: window, to: UIStoryboard(name: "SignIn", bundle: nil).instantiateInitialViewController())
+                UIViewTransitioner.transitionRootViewController(with: window, to: UIStoryboard.instantiateInitialVC(name: "SignIn"))
             default:
                 return
             }
@@ -54,6 +54,6 @@ extension AppDelegate: GIDSignInDelegate {
         print("Has logged in: \(user.profile.name)")
         
         DriveManager.sharedInstance.initialize(authorizer: user)
-        UIViewTransitioner.transitionRootViewController(with: window, to: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController())
+        UIViewTransitioner.transitionRootViewController(with: window, to: UIStoryboard.instantiateInitialVC(name: "Main"))
     }
 }
