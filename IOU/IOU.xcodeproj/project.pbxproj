@@ -145,7 +145,7 @@
 			children = (
 				344D2843200348500003880E /* Managers */,
 				344D28402003014A0003880E /* Shared */,
-				34B22A782002D0AC00898009 /* Resources */,
+				34B22A782002D0AC00898009 /* Configs */,
 				34B22A482002CC6100898009 /* AppDelegate.swift */,
 				34B22A4A2002CC6100898009 /* FirstViewController.swift */,
 				34B22A4C2002CC6100898009 /* SecondViewController.swift */,
@@ -176,14 +176,14 @@
 			path = IOUUITests;
 			sourceTree = "<group>";
 		};
-		34B22A782002D0AC00898009 /* Resources */ = {
+		34B22A782002D0AC00898009 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
 				344D284620034CFB0003880E /* test1.js */,
 				344D284720034CFB0003880E /* test2.js */,
 				34B22A7B2002D0D900898009 /* GoogleService-Info.plist */,
 			);
-			path = Resources;
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		503605F62B14856EB2B774FA /* Pods */ = {
