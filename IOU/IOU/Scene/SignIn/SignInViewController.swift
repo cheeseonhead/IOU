@@ -12,5 +12,11 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     
+    override func viewDidLoad() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+    }
+}
+
+extension SignInViewController: GIDSignInUIDelegate {
     
 }
