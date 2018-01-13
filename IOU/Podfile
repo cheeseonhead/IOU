@@ -10,7 +10,6 @@ target 'IOU' do
   # Pods for IOU
   pod 'GoogleSignIn'
   pod 'GoogleAPIClientForREST/Drive'
-  pod 'ReachabilitySwift'
 
   target 'IOUTests' do
     inherit! :search_paths
