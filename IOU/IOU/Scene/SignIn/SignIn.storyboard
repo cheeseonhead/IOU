@@ -6,14 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="Q4Y-Ra-djc">
             <objects>
-                <viewController id="mOz-MO-HdD" sceneMemberID="viewController">
+                <viewController id="mOz-MO-HdD" customClass="SignInViewController" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HSZ-uH-S1J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,15 +25,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldC-bW-GIS">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ldC-bW-GIS" secondAttribute="height" multiplier="1:1" id="SCh-Rh-2gX"/>
+                                    <constraint firstAttribute="height" constant="30" id="bX4-0U-i6W"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bgd-Xv-8DN" firstAttribute="trailing" secondItem="krw-8k-R8p" secondAttribute="trailing" constant="16" id="1ps-gh-45E"/>
+                            <constraint firstItem="ldC-bW-GIS" firstAttribute="centerX" secondItem="bgd-Xv-8DN" secondAttribute="centerX" id="BQu-LT-qKN"/>
                             <constraint firstItem="krw-8k-R8p" firstAttribute="leading" secondItem="bgd-Xv-8DN" secondAttribute="leading" constant="16" id="Ic4-Lr-qHf"/>
                             <constraint firstItem="krw-8k-R8p" firstAttribute="top" secondItem="bgd-Xv-8DN" secondAttribute="top" constant="155" id="anC-Iz-6pY"/>
+                            <constraint firstItem="ldC-bW-GIS" firstAttribute="top" secondItem="krw-8k-R8p" secondAttribute="bottom" constant="82" id="m9Z-aN-6c4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bgd-Xv-8DN"/>
                     </view>
+                    <connections>
+                        <outlet property="signInButton" destination="ldC-bW-GIS" id="gch-jX-0K5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ue-EV-edO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
