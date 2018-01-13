@@ -39,12 +39,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        guard let window = window else { return }
+        
         guard error == nil else {
+            switch(error.getGIDSignInError()) {
+            case .hasNoAuthInKeychain:
+                UIViewTransitioner.transitionRootViewController(with: window, to: UIStoryboard(name: "SignIn", bundle: nil).instantiateInitialViewController())
+            default:
+                return
+            }
             return
         }
         
         print("Has logged in: \(user.profile.name)")
         
         DriveManager.sharedInstance.initialize(authorizer: user)
+        UIViewTransitioner.transitionRootViewController(with: window, to: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController())
     }
 }
