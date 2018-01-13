@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+extension UIStoryboard {
+    static func instantiateInitialVC(name: String) -> UIViewController {
+        guard let vc = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() else {
+            fatalError("Failed to instantiate view controller in storyboard: \(name)")
+        }
+        
+        return vc
+    }
+}
