@@ -12,6 +12,7 @@
 		344D2845200348D70003880E /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D2844200348D70003880E /* DriveManager.swift */; };
 		344D284820034CFB0003880E /* test1.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284620034CFB0003880E /* test1.js */; };
 		344D284920034CFB0003880E /* test2.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284720034CFB0003880E /* test2.js */; };
+		3486C07D200AB5230015ABC5 /* Error+GIDSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */; };
 		34B22A492002CC6100898009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A482002CC6100898009 /* AppDelegate.swift */; };
 		34B22A4B2002CC6100898009 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A4A2002CC6100898009 /* FirstViewController.swift */; };
 		34B22A4D2002CC6100898009 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A4C2002CC6100898009 /* SecondViewController.swift */; };
@@ -48,6 +49,7 @@
 		344D2844200348D70003880E /* DriveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveManager.swift; sourceTree = "<group>"; };
 		344D284620034CFB0003880E /* test1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test1.js; sourceTree = "<group>"; };
 		344D284720034CFB0003880E /* test2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test2.js; sourceTree = "<group>"; };
+		3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+GIDSignIn.swift"; sourceTree = "<group>"; };
 		34B22A452002CC6100898009 /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B22A482002CC6100898009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B22A4A2002CC6100898009 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		344D28402003014A0003880E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3486C07B200AB5100015ABC5 /* Error */,
 				344D28412003015A0003880E /* Credentials.swift */,
 			);
 			path = Shared;
@@ -116,6 +119,14 @@
 				344D2844200348D70003880E /* DriveManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		3486C07B200AB5100015ABC5 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		34B22A3C2002CC6100898009 = {
@@ -519,6 +530,7 @@
 				344D28422003015A0003880E /* Credentials.swift in Sources */,
 				34B22A4B2002CC6100898009 /* FirstViewController.swift in Sources */,
 				344D2845200348D70003880E /* DriveManager.swift in Sources */,
+				3486C07D200AB5230015ABC5 /* Error+GIDSignIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
