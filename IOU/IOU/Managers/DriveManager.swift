@@ -12,11 +12,15 @@ import GoogleSignIn
 import GoogleAPIClientForREST
 
 class DriveManager {
-    private let context: JSContext
     
-    required init(authorizer: GIDGoogleUser) {
+    static let sharedInstance = DriveManager()
+    
+    private var context: JSContext?
+    
+    func initialize(authorizer: GIDGoogleUser) {
         
         context = JSContext()
+        guard let context = context else { return }
         
         guard let test1Path = Bundle.main.path(forResource: "test1", ofType: "js"),
             let test2Path = Bundle.main.path(forResource: "test2", ofType: "js") else {
