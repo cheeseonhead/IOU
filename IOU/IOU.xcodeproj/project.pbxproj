@@ -13,6 +13,11 @@
 		344D284820034CFB0003880E /* googleDriveManager.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284620034CFB0003880E /* googleDriveManager.js */; };
 		344D284920034CFB0003880E /* test2.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284720034CFB0003880E /* test2.js */; };
 		3486C07D200AB5230015ABC5 /* Error+GIDSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */; };
+		3486C082200AC0A10015ABC5 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3486C081200AC0A10015ABC5 /* SignIn.storyboard */; };
+		3486C084200AC1180015ABC5 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3486C083200AC1180015ABC5 /* SignInViewController.swift */; };
+		3486C087200AC2100015ABC5 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3486C086200AC2100015ABC5 /* Loading.storyboard */; };
+		3486C089200AC4E30015ABC5 /* UIViewTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3486C088200AC4E30015ABC5 /* UIViewTransitioner.swift */; };
+		3486C08C200AC6F10015ABC5 /* UIStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3486C08B200AC6F10015ABC5 /* UIStoryboard+Instantiate.swift */; };
 		34B22A492002CC6100898009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A482002CC6100898009 /* AppDelegate.swift */; };
 		34B22A4B2002CC6100898009 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A4A2002CC6100898009 /* FirstViewController.swift */; };
 		34B22A4D2002CC6100898009 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A4C2002CC6100898009 /* SecondViewController.swift */; };
@@ -50,6 +55,11 @@
 		344D284620034CFB0003880E /* googleDriveManager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = googleDriveManager.js; sourceTree = "<group>"; };
 		344D284720034CFB0003880E /* test2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test2.js; sourceTree = "<group>"; };
 		3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+GIDSignIn.swift"; sourceTree = "<group>"; };
+		3486C081200AC0A10015ABC5 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		3486C083200AC1180015ABC5 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3486C086200AC2100015ABC5 /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
+		3486C088200AC4E30015ABC5 /* UIViewTransitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewTransitioner.swift; sourceTree = "<group>"; };
+		3486C08B200AC6F10015ABC5 /* UIStoryboard+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
 		34B22A452002CC6100898009 /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B22A482002CC6100898009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B22A4A2002CC6100898009 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +117,7 @@
 		344D28402003014A0003880E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3486C08A200AC6DE0015ABC5 /* UIStoryboard */,
 				3486C07B200AB5100015ABC5 /* Error */,
 				344D28412003015A0003880E /* Credentials.swift */,
 			);
@@ -117,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				344D2844200348D70003880E /* DriveManager.swift */,
+				3486C088200AC4E30015ABC5 /* UIViewTransitioner.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -135,6 +147,40 @@
 				344D284620034CFB0003880E /* googleDriveManager.js */,
 			);
 			path = JS;
+			sourceTree = "<group>";
+		};
+		3486C07F200AC06B0015ABC5 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				3486C085200AC2010015ABC5 /* Loading */,
+				3486C080200AC0710015ABC5 /* SignIn */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		3486C080200AC0710015ABC5 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				3486C081200AC0A10015ABC5 /* SignIn.storyboard */,
+				3486C083200AC1180015ABC5 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		3486C085200AC2010015ABC5 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				3486C086200AC2100015ABC5 /* Loading.storyboard */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		3486C08A200AC6DE0015ABC5 /* UIStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				3486C08B200AC6F10015ABC5 /* UIStoryboard+Instantiate.swift */,
+			);
+			path = UIStoryboard;
 			sourceTree = "<group>";
 		};
 		34B22A3C2002CC6100898009 = {
@@ -162,6 +208,7 @@
 		34B22A472002CC6100898009 /* IOU */ = {
 			isa = PBXGroup;
 			children = (
+				3486C07F200AC06B0015ABC5 /* Scene */,
 				344D2843200348500003880E /* Managers */,
 				3486C07E200ABBD50015ABC5 /* JS */,
 				344D28402003014A0003880E /* Shared */,
@@ -349,7 +396,9 @@
 				34B22A522002CC6200898009 /* Assets.xcassets in Resources */,
 				34B22A502002CC6200898009 /* Main.storyboard in Resources */,
 				344D284820034CFB0003880E /* googleDriveManager.js in Resources */,
+				3486C082200AC0A10015ABC5 /* SignIn.storyboard in Resources */,
 				344D284920034CFB0003880E /* test2.js in Resources */,
+				3486C087200AC2100015ABC5 /* Loading.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,12 +582,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3486C084200AC1180015ABC5 /* SignInViewController.swift in Sources */,
 				34B22A4D2002CC6100898009 /* SecondViewController.swift in Sources */,
 				34B22A492002CC6100898009 /* AppDelegate.swift in Sources */,
 				344D28422003015A0003880E /* Credentials.swift in Sources */,
 				34B22A4B2002CC6100898009 /* FirstViewController.swift in Sources */,
 				344D2845200348D70003880E /* DriveManager.swift in Sources */,
+				3486C089200AC4E30015ABC5 /* UIViewTransitioner.swift in Sources */,
 				3486C07D200AB5230015ABC5 /* Error+GIDSignIn.swift in Sources */,
+				3486C08C200AC6F10015ABC5 /* UIStoryboard+Instantiate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
