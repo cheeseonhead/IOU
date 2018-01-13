@@ -10,7 +10,7 @@
 		2CA3CEADABBDF831A4787894 /* Pods_IOUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5510885D7F59D5DFC9BDF17C /* Pods_IOUTests.framework */; };
 		344D28422003015A0003880E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D28412003015A0003880E /* Credentials.swift */; };
 		344D2845200348D70003880E /* DriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344D2844200348D70003880E /* DriveManager.swift */; };
-		344D284820034CFB0003880E /* test1.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284620034CFB0003880E /* test1.js */; };
+		344D284820034CFB0003880E /* googleDriveManager.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284620034CFB0003880E /* googleDriveManager.js */; };
 		344D284920034CFB0003880E /* test2.js in Resources */ = {isa = PBXBuildFile; fileRef = 344D284720034CFB0003880E /* test2.js */; };
 		3486C07D200AB5230015ABC5 /* Error+GIDSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */; };
 		34B22A492002CC6100898009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B22A482002CC6100898009 /* AppDelegate.swift */; };
@@ -47,7 +47,7 @@
 		22FA3C353414EDE1A7C72772 /* Pods-IOUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOUUITests/Pods-IOUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		344D28412003015A0003880E /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		344D2844200348D70003880E /* DriveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveManager.swift; sourceTree = "<group>"; };
-		344D284620034CFB0003880E /* test1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test1.js; sourceTree = "<group>"; };
+		344D284620034CFB0003880E /* googleDriveManager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = googleDriveManager.js; sourceTree = "<group>"; };
 		344D284720034CFB0003880E /* test2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test2.js; sourceTree = "<group>"; };
 		3486C07C200AB5230015ABC5 /* Error+GIDSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+GIDSignIn.swift"; sourceTree = "<group>"; };
 		34B22A452002CC6100898009 /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +129,14 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		3486C07E200ABBD50015ABC5 /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				344D284620034CFB0003880E /* googleDriveManager.js */,
+			);
+			path = JS;
+			sourceTree = "<group>";
+		};
 		34B22A3C2002CC6100898009 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				344D2843200348500003880E /* Managers */,
+				3486C07E200ABBD50015ABC5 /* JS */,
 				344D28402003014A0003880E /* Shared */,
 				34B22A782002D0AC00898009 /* Configs */,
 				34B22A482002CC6100898009 /* AppDelegate.swift */,
@@ -190,7 +199,6 @@
 		34B22A782002D0AC00898009 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				344D284620034CFB0003880E /* test1.js */,
 				344D284720034CFB0003880E /* test2.js */,
 				34B22A7B2002D0D900898009 /* GoogleService-Info.plist */,
 			);
@@ -340,7 +348,7 @@
 				34B22A7C2002D0D900898009 /* GoogleService-Info.plist in Resources */,
 				34B22A522002CC6200898009 /* Assets.xcassets in Resources */,
 				34B22A502002CC6200898009 /* Main.storyboard in Resources */,
-				344D284820034CFB0003880E /* test1.js in Resources */,
+				344D284820034CFB0003880E /* googleDriveManager.js in Resources */,
 				344D284920034CFB0003880E /* test2.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
